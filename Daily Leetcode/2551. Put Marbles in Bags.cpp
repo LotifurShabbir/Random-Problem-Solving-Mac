@@ -5,15 +5,15 @@ class Solution {
                 return 0;
             }
             
-            vector<int> splits;
+            vector<long long int> splits;
             for (size_t i = 0; i < weights.size() - 1; ++i) {
                 splits.push_back(weights[i] + weights[i + 1]);
             }
             
             sort(splits.begin(), splits.end());
             
-            int max_score = 0, min_score = 0;
-            int i = k - 1;
+            long long int max_score = 0, min_score = 0;
+            long long int i = k - 1;
             
             for (int j = 0; j < i; ++j) {
                 min_score += splits[j];
